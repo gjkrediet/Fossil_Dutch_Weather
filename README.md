@@ -18,8 +18,8 @@ A widget is also provided, showing an icon reflecting the data from buienradar (
 ![weatherApp](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/592ba441-fb95-47fd-bc55-4cc2fcae87ed)
 
 ## App and companion/tasker-app
-The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). This doenst have to be nescecarily so. The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The KNMI-data should be sent as is, beeing a JSON string.
-The Tasker tasks are included. Import them in Tasker and create a profile for each to run them at a regular interval. KNMI-data needs an API-key which you need to obtain (for free for a limitited update frequency).
+The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The KNMI-data should be sent as is, in JSON format.
+Two Tasker tasks are included. One for buienradar which also provides for the widget. The other one for KNMI-data. Import them in Tasker, cahnge them to your needs and create a profile for each to run them at a regular interval. KNMI-data needs an API-key which you need to obtain at weerlive.nl (for free for a limited update frequency).
 
 The source of the app is included as well as the wapp-file
 ## Widget
