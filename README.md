@@ -12,7 +12,7 @@ The KNMI API provides local data about the weather including a 3 days forecast.
 
 For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-weerdata and https://weerlive.nl/delen.php.
 This app shows these data. Buienradar-data with a resolution of 10 minutes, the current location, temperature and min/max temperatures of today. The app runs in the background so that data is immediately ready when the app is activated. The refresh-rate depends on the settings of the companion-app but the watch can send a request tot Gadetbridge, asking for an immediate update.
-
+<br>
 A widget is also provided, showing an icon reflecting the data from buienradar (icon + max precipitation).
 
 ![weatherApp](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/592ba441-fb95-47fd-bc55-4cc2fcae87ed)
