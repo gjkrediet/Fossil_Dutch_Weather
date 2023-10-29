@@ -1,5 +1,5 @@
 # Fossil_Dutch_Weather
-Description only. Apps and sources are coming soon
+Description only. Apps and sources are not fully woking. Crashing with latest firmware. WIP
 
 App for Fossil Hybrid HR with info from Dutch buienradar and KNMI
 ## Description
