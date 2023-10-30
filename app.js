@@ -9,9 +9,6 @@ return {
 		buienradar: undefined
 	},
     timeout: 30 * 1000,
-	butbot: 'icRefresh',
-	buttop: 'icRefresh',
-
 
     handler: function (event, response) {
         this.wrap_event(event)
@@ -28,7 +25,7 @@ return {
 		
 		response.draw = {}
 		var layout_info = {
-			json_file: 'weather_layout2'
+			json_file: 'weather_layout'
 		}
 		
 		if (this.config.buienradar != undefined && this.config.buienradar.rawtxt.length == 168) {
