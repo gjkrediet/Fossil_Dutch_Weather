@@ -144,7 +144,7 @@ return {
 						if (event.type === 'middle_short_press_release') {
 							response.go_home(false)
 						}
-						if (event.type === 'top_short_press_release') {
+						if (event.type === 'bottom_short_press_release') {
 							self.weather_update()
 						}
                     }
