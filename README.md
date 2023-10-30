@@ -12,7 +12,8 @@ The KNMI API provides local data about the weather including a 3 days forecast.
 For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-weerdata and https://weerlive.nl/delen.php.
 This app shows these data. Buienradar-data with a resolution of 10 minutes, the current location, temperature and min/max temperatures of today and 2 days ahead. The app runs in the background so that data is immediately ready when the app is activated. The refresh-rate depends on the settings of the companion-app but the watch can send a request tot Gadetbridge, asking for an immediate update.
 
-![20231030_210910](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/6b9b3b48-dc8e-4587-aeb7-d0b0497cb72d)
+![20231030_210910](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/0a551bd6-476c-4f9a-9e88-a997acc0b83b)
+
 
 ## App and companion/tasker-app
 The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The KNMI-data is sent in JSON format.
