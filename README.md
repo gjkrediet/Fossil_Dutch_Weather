@@ -15,7 +15,7 @@ This app shows these data. Buienradar-data with a resolution of 10 minutes, the 
 ![20231030_210910](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/0a551bd6-476c-4f9a-9e88-a997acc0b83b)
 
 ## App and companion/tasker-app
-The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The KNMI-data is sent in JSON format.
+The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The various KNMI-data is sent in JSON format.
 Two Tasker tasks are included. One for buienradar and one for KNMI-data. Import them in Tasker, change them to your needs and create a profile for each to run them at a regular interval. KNMI-data needs an API-key which you need to obtain at weerlive.nl (for free for a limited update frequency) and insert into the http-request in tasker.
 
 The source of the app is included as well as the wapp-file
