@@ -10,7 +10,7 @@ The Buienradar API provides hyperlocal and per 5 minutes data about the expected
 The KNMI API provides local data about the weather including a 3 days forecast.
 
 For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-weerdata and https://weerlive.nl/delen.php.
-This app shows these data. Buienradar-data with a resolution of 10 minutes, the current location, temperature and min/max temperatures of today and 2 days ahead. The app runs in the background so that data is immediately ready when the app is activated. The refresh-rate depends on the settings of the companion-app but by pressing the bottom-button you can send a request tot Gadetbridge, asking for an immediate update (you need to catch this request in Tasker).
+This app shows these data. Buienradar-data with a resolution of 10 minutes, the current location, temperature and min/max temperatures and rainchance of today and 2 days ahead. The app runs in the background so that data is immediately ready when the app is activated. The refresh-rate depends on the settings of the companion-app but by pressing the bottom-button you can send a request tot Gadetbridge, asking for an immediate update (you need to catch this request in Tasker).
 
 ![20231030_210910](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/0a551bd6-476c-4f9a-9e88-a997acc0b83b)
 
