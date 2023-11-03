@@ -11,6 +11,7 @@ The KNMI API provides local data about the weather including a 3 days forecast i
 
 For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-weerdata and https://weerlive.nl/delen.php.
 This app shows these data. Buienradar-data (with a resolution of 10 minutes), the current location, temperature and min/max temperatures and rainchance of today and 2 days ahead. Upon start of the app the data is requested from Tasker and - when received - shown in the app. By pressing the bottom-button you can send a request tot Gadetbridge, asking for an immediate update.
+The app is rightie/leftie-proof
 
 ![20231030_210910](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/0a551bd6-476c-4f9a-9e88-a997acc0b83b)
 
