@@ -17,6 +17,8 @@ The app is rightie/leftie-proof
 
 ## App and Tasker
 The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The various KNMI-data is sent in JSON format.
+
+### Dispatcher
 For the app to work you need to catch the 'RetrieveWeather' and 'RefreshWeather' in Tasker.
 For that create a profile in Tasker with the event "Intent Received" with the following content:
 
@@ -36,7 +38,7 @@ Endif
 
 Intents sent to Gadgetbridge are one with knmi-data and one with buienradar-data. 
 
-knmi-data:
+### knmi-data:
 
 Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG<br>
 
@@ -44,7 +46,7 @@ Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.knmi": %Knmidata}}
 
 The (global) variable %Knmidata should contain a JSON-string like this: {"temp":"8.3","time":"03-11-2023 08:53","plaats":"Amsterdam","d0tmin":"7","d0tmax":"11","d0neerslag":"13","d1tmin":"7","d1tmax":"11","d1neerslag":"90","d2tmin":"9","d2tmax":"12","d2neerslag":"90"}
 
-buienradar-data:
+### buienradar-data:
 
 Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG
 
@@ -52,6 +54,7 @@ Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar": %Brda
 	
 The (global) variable %Brdata should contain a string containing the data from buienradar with no delimiters or linebreaks. Thus it contains 7 characters (3 for precipitation, 4 for the time in hhmm) for each 5 minutes of data. It looks like this: 000151000015150401520040152500015300001535000154000015450001550120155515016000901605080161000016150001620000162500016300001635000164000016450001650000165500017000901705
 
+### Examples
 Three Tasker tasks are included as an example how to acheive the above. One for downloading buienradar-data and storing it in %Brdata, one for downloading KNMI-data and storing it in %Knmidata. Import them in Tasker, change them to your needs and create a profile for each to run them at a regular interval. KNMI-data needs an API-key which you need to obtain at weerlive.nl (for free for a limited update frequency) and insert into the http-request in tasker. The 'dispatcher' task is also included. 
 
 The source of the app is included as well as the wapp-file
