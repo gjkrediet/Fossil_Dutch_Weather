@@ -23,7 +23,7 @@ Create a 'dispatcher'-task in Tasker with the following content:
 
 If: %extra_action EQ RefreshWeather
 
-	..... (send back intents tot Gadgetbridge with data. See below)
+	..... (send back intents to Gadgetbridge with data. See below)
  
 Else if %extra_action EQ RetreiveWeather
 
