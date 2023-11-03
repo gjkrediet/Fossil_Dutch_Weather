@@ -20,7 +20,7 @@ The way I implemented it, the app relies on Tasker for retreiving information fr
 For the app to work you need to catch the 'RetrieveWeather' and 'RefreshWeather' in Tasker.
 For that create a profile in Tasker with the event "Intent Received" with the following content:
 
-Action: nodomain.freeyourgadget.gadgetbridge.Q_COMMUTE_MENU
+Action: nodomain.freeyourgadget.gadgetbridge.Q_COMMUTE_MENU.
 
 Make this profile start a 'dispatcher'-task with the following content:
 
@@ -38,7 +38,7 @@ Intents sent to Gadgetbridge are one with knmi-data and one with buienradar-data
 
 knmi-data:
 
-Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG
+Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG<br>
 
 Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.knmi": %Knmidata}}}
 
