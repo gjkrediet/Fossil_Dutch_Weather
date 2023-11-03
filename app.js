@@ -32,17 +32,21 @@ return {
 			var rawtxt=this.config.buienradar.rawtxt	
 			layout_info['brtijd'] = rawtxt.substring(3,5) + ':' + rawtxt.substring(5,7)
 			var intensity = 0
-			var israin = true;
 			for (var i=0;i<12;++i) {
 				intensity = Math.max(rawtxt.substring(i*14,i*14+3),rawtxt.substring(i*14+7,i*14+10))
-				israin=(intensity>0)
-				intensity=Math.pow(10, (intensity-109)/32) //echte intensiteit in mm
-				intensity=6*Math.sqrt(Math.min(intensity*2,60)) //toonbaar maken
-				layout_info['h_' + i] = (israin?intensity+3:1)
-				layout_info['y_' + i] = (80 - (israin?intensity+2:1))
+				if (intensity>77) {
+					intensity = 3 + (intensity - 77) * 0.57
+				} else if (intensity>0) {
+					intensity=2
+				} else {
+					intensity=1
+				}
+				intensity=Math.round(intensity)
+				layout_info['h_' + i] = intensity
+				layout_info['y_' + i] = 80 - intensity
 				layout_info['x_' + i] = 35 + i * 14
 			}
-			layout_info['w'] = 15
+			layout_info['w'] = 13
 		}
 		
 		if (this.config.knmi != undefined) {
