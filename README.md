@@ -45,7 +45,10 @@ Three Tasker tasks are included as an example how to acheive the above. One for 
 The source of the app is included as well as the wapp-file
 
 ## Widget
-The source for a buienradar complication/widget is also included. It shows an icon (raindrop indicating rain within next 15 minutes or an umbrealla indicating rain witin the next two hours) and the maximum precipation. You can preprocess/compile/pack it together with a watchface. In de layout-file for the watchface (..\build\files\config\customWatchface) you should include a section like this:
+The source for a buienradar complication/widget is also included. It shows an icon (raindrop indicating rain within next 15 minutes or an umbrealla indicating rain witin the next two hours) and the maximum precipation. 
+![20231103_095239](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/16a0695e-f826-4775-ae10-f9e6dd91e0d6)
+
+You can preprocess/compile/pack it together with a watchface. In de layout-file for the watchface (..\build\files\config\customWatchface) you should include a section like this:
 {
  "type": "comp",
  "name": "widgetBr",
