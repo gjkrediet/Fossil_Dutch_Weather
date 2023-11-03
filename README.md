@@ -20,22 +20,31 @@ For the app to work you need to catch the 'RetrieveWeather' and 'RefreshWeather'
 For that create a profile in Tasker with the event "Intent Received" with the following content:
 Action: nodomain.freeyourgadget.gadgetbridge.Q_COMMUTE_MENU
 Create a 'dispatcher'-task in Tasker with the following content:
+
 If: %extra_action EQ RefreshWeather
+
 	..... (send back intents tot Gadgetbridge with data. See below)
+ 
 Else if %extra_action EQ RetreiveWeather
+
 	..... (perform the task to download data from the internet. See below)
+ 
 Endif
 
 Intents sent to Gadgetbridge are one with knmi-data and one with buienradar-data. 
 
 knmi-data:
+
 Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG
+
 Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.knmi": %Knmidata}}}
 
 The (global) variable %Knmidata should contain a JSON-string like this: {"temp":"8.3","time":"03-11-2023 08:53","plaats":"Amsterdam","d0tmin":"7","d0tmax":"11","d0neerslag":"13","d1tmin":"7","d1tmax":"11","d1neerslag":"90","d2tmin":"9","d2tmax":"12","d2neerslag":"90"}
 
 buienradar-data:
+
 Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG
+
 Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar": %Brdata}}}
 	
 The (global) variable %Brdata should contain a string containing the data from buienradar with no delimiters or linebreaks. Thus it contains 7 characters (3 for precipitation, 4 for the time in hhmm) for each 5 minutes of data. It looks like this: 000151000015150401520040152500015300001535000154000015450001550120155515016000901605080161000016150001620000162500016300001635000164000016450001650000165500017000901705
@@ -49,22 +58,39 @@ The source for a buienradar complication/widget is also included. It shows an ic
 ![20231103_095239](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/48a5caf3-940a-4c5f-a4a4-0ec001263711)
 You can preprocess/compile/pack it together with a watchface. In de layout-file for the watchface (..\build\files\config\customWatchface) you should include a section like this:
 {
+
 "type": "comp",
+
  "name": "widgetBr",
+ 
  "goal_ring": false,
+ 
  "color": "white",
+ 
  "data": {
-	"update_timeout": 60,
-	"timeout_hide_text": false,
-	"timeout_show_circle": true
+
+ "update_timeout": 60,
+
+ "timeout_hide_text": false,
+
+ "timeout_show_circle": true
+ 
  },
+ 
  "size": {
-	"w": 76,
-	"h": 76
+
+ "w": 76,
+
+ "h": 76
+ 
  },
+ 
  "pos": {
-	"x": 120,
-	"y": 180
+
+ "x": 120,
+
+ "y": 180
+ 
  }
 }
 
