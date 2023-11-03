@@ -19,8 +19,10 @@ The app is rightie/leftie-proof
 The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The various KNMI-data is sent in JSON format.
 For the app to work you need to catch the 'RetrieveWeather' and 'RefreshWeather' in Tasker.
 For that create a profile in Tasker with the event "Intent Received" with the following content:
+
 Action: nodomain.freeyourgadget.gadgetbridge.Q_COMMUTE_MENU
-Create a 'dispatcher'-task in Tasker with the following content:
+
+Make this profile start a 'dispatcher'-task with the following content:
 
 If: %extra_action EQ RefreshWeather
 
