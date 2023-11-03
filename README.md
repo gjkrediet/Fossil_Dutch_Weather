@@ -49,7 +49,7 @@ The source for a buienradar complication/widget is also included. It shows an ic
 ![20231103_095239](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/48a5caf3-940a-4c5f-a4a4-0ec001263711)
 You can preprocess/compile/pack it together with a watchface. In de layout-file for the watchface (..\build\files\config\customWatchface) you should include a section like this:
 {
- "type": "comp",
+"type": "comp",
  "name": "widgetBr",
  "goal_ring": false,
  "color": "white",
