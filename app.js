@@ -18,7 +18,10 @@ return {
     log: function (object) {
         req_data(this.node_name, '"type": "log", "data":' + JSON.stringify(object), 999999, true)
     },
-	weather_update: function() {
+	weather_retrieve: function() {
+        req_data(this.node_name, '"commuteApp._.config.commute_info":{"dest":"RetrieveWeather","action":"start"}', 999999, true)
+	},
+	weather_refresh: function() {
         req_data(this.node_name, '"commuteApp._.config.commute_info":{"dest":"UpdateWeather","action":"start"}', 999999, true)
 	},
     draw_info: function (response) {
@@ -56,10 +59,12 @@ return {
 			layout_info['d1'] = this.config.knmi.d1tmax + '\n' + this.config.knmi.d1tmin + '\n' + this.config.knmi.d1neerslag
 			layout_info['d2'] = this.config.knmi.d2tmax + '°C\n' + this.config.knmi.d2tmin + '°C\n' + this.config.knmi.d2neerslag + '%'
 		}
+		layout_info['background'] = (get_common().U('WATCH_MODE')=='LEFTIE'?'weatherBGleftie':'weatherBG')
 		response.draw[this.node_name] = {
 			'layout_function': 'layout_parser_json',
 			'layout_info': layout_info,
 		}
+		response.emulate_double_tap()
 		stop_timer(this.node_name, 'inactivity_timer')
 		start_timer(this.node_name, 'inactivity_timer', this.timeout)
 	},
@@ -109,6 +114,19 @@ return {
                 layout_info: layout_info
             }
         }
+        response.send_user_class_event = function (event_type) {
+            response.send_generic_event({
+                type: event_type,
+                class: 'user'
+            })
+        }
+        response.emulate_double_tap = function(){
+            this.send_user_class_event('double_tap')
+        }
+        response.send_generic_event = function (event_object) {
+            if (response.i == undefined) response.i = []
+            response.i.push(event_object)
+        }
         return response
     },
     handle_global_event: function (self, state_machine, event, response) {
@@ -123,7 +141,7 @@ return {
         } else if (event.type === 'middle_hold') {
             response.go_back(true)
         } else if (event.type == 'timer_expired' && is_this_timer_expired(event, self.node_name, 'inactivity_timer')) {
-            response.go_back(false)
+            response.go_home(true)
         }
     },
     handle_state_specific_event: function (state, state_phase) {
@@ -140,21 +158,22 @@ return {
                     return function (self, response) {
                         response.move_hands(90, 90, false)
 						self.draw_info(response)
-//						self.weather_update()
+						self.weather_retrieve()
                    }
                 }
                 if (state_phase == 'during') {
                     return function (self, state_machine, event, response) {
 						if (event.type === 'middle_short_press_release') {
-							response.go_home(false)
+							response.go_back(true)
 						}
 						if (event.type === 'bottom_short_press_release') {
-							self.weather_update()
+							self.weather_refresh()
 						}
                     }
                 }
                 if (state_phase == 'exit') {
-                    return function (self, response) {
+					return function (arg, arg2) { // function 14, 20 geen background
+//                    return function (self, response) {
 						stop_timer(self.node_name, 'inactivity_timer')
 					};
                 }
