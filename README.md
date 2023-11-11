@@ -10,10 +10,12 @@ The Buienradar API provides hyperlocal and per 5 minutes data about the expected
 The KNMI API provides local data about the weather including a 3 days forecast in JSON-format.
 
 For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-weerdata and https://weerlive.nl/delen.php.
-This app shows these data. Buienradar-data (with a resolution of 10 minutes), the current location, temperature and min/max temperatures and rainchance of today and 2 days ahead. Upon start of the app the data is requested from Tasker and - when received - shown in the app. By pressing the bottom-button you can send a request tot Gadetbridge, asking for an immediate update.
+This app shows these data. Buienradar-data (with a resolution of 10 minutes on a timescale of 2 hours), the current location, temperature and min/max temperatures and rainchance of today and 2 days ahead. Upon start of the app the data is requested from Tasker and - when received - shown in the app. 
 The app is rightie/leftie-proof
 
-![20231030_210910](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/0a551bd6-476c-4f9a-9e88-a997acc0b83b)
+![20231111_191428](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/84026132-1ff0-40bb-9c3c-da1b29f1c778)
+
+The app exits after 10 seconds unless you hit the top buton. It is then locked and it retrieves information from the phone every minute. By pressing the top-button again you send a request tot Gadetbridge, asking for an immediate update.
 
 ## App and Tasker
 The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The various KNMI-data is sent in JSON format.
