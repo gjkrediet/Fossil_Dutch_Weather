@@ -15,7 +15,7 @@ The app is rightie/leftie-proof
 
 ![20231111_191428](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/84026132-1ff0-40bb-9c3c-da1b29f1c778)
 
-The app exits after 10 seconds unless you hit the top buton. It is then locked and it retrieves information from the phone every minute. By pressing the top-button again you send a request tot Gadetbridge, asking for an immediate update.
+The app exits after 10 seconds unless you hit the top buton. It is then locked. When locked, the hands show the actual time and the app retrieves information from the phone every minute. By pressing the top-button again you send a request tot Gadetbridge, asking for an immediate update.
 
 ## App and Tasker
 The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The various KNMI-data is sent in JSON format.
