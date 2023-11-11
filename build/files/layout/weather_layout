@@ -19,273 +19,50 @@
       "inversion": false
     },
     {
-      "id": 1,
-      "parent_id": 0,
-      "type": "image",
-      "image_name": "weatherBG",
-      "placement": {
-        "type": "relative"
-      },
-      "visible": true,
-      "inversion": false
-    },
-    {
-        "id": 2,
+        "id": 1,
         "parent_id": 0,
-        "type": "solid",
-        "color": 3,
+        "type": "image",
+		"image_name": "#button_middle",
         "dimension": {
-            "width": "#w",
-            "height": "#h_0"
+            "type": "rigid",
+            "width": 24,
+            "height": 24
         },
         "placement": {
             "type": "absolute",
-            "left": "#x_0",
-            "top": "#y_0"
+            "left": "#button_middle_x",
+            "top": 106
         },
         "visible": true,
         "inversion": false
     },
     {
-        "id": 3,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_1"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_1",
-            "top": "#y_1"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 4,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_2"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_2",
-            "top": "#y_2"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 5,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_3"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_3",
-            "top": "#y_3"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 6,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_4"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_4",
-            "top": "#y_4"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 7,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_5"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_5",
-            "top": "#y_5"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 8,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_6"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_6",
-            "top": "#y_6"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 9,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_7"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_7",
-            "top": "#y_7"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 10,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_8"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_8",
-            "top": "#y_8"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 11,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_9"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_9",
-            "top": "#y_9"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 12,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_10"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_10",
-            "top": "#y_10"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-        "id": 13,
-        "parent_id": 0,
-        "type": "solid",
-        "color": 3,
-        "dimension": {
-            "width": "#w",
-            "height": "#h_11"
-        },
-        "placement": {
-            "type": "absolute",
-            "left": "#x_11",
-            "top": "#y_11"
-        },
-        "visible": true,
-        "inversion": false
-    },
-    {
-      "id": 14,
-      "parent_id": 0,
-      "type": "text",
-      "text": "#brtijd",
-      "ppem": 17,
-      "color": 3,
-      "main_alignment": 1,
-      "cross_alignment": 2,
-      "dimension": {
-        "type": "rigid",
-        "width": 100,
-        "height": 34
-      },
-      "placement": {
-        "type": "absolute",
-        "left": 35,
-        "top": 95
-      },
-      "visible": true,
-      "inversion": false
-    },
-    {
-      "id": 15,
+      "id": 2,
       "parent_id": 0,
       "type": "text",
       "text": "#temp_cur",
       "ppem": 24,
       "color": 3,
-      "main_alignment": 2,
-      "cross_alignment": 0,
       "dimension": {
         "type": "rigid",
-        "width": 80,
+        "width": 60,
         "height": 30
       },
       "placement": {
         "type": "absolute",
-        "left": 20,
-        "top": 128
+        "left": 145,
+        "top": 126
       },
       "visible": true,
       "inversion": false
     },
     {
-      "id": 16,
+      "id": 3,
       "parent_id": 0,
       "type": "text",
       "text": "#plaats_tijd",
       "ppem": 17,
       "color": 3,
-      "main_alignment": 2,
-      "cross_alignment": 0,
       "dimension": {
         "type": "rigid",
         "width": 50,
@@ -300,14 +77,14 @@
       "inversion": false
     },
     {
-        "id": 17,
+        "id": 4,
         "parent_id": 0,
         "type": "text_page",
         "text": "#d0",
         "ppem": 17,
         "color": 3,
         "ascent": 17,
-        "justify": 0,
+        "justify": 1,
         "line_width": [
             70,
             70,
@@ -320,21 +97,21 @@
         },
         "placement": {
             "type": "absolute",
-            "left": 52,
+            "left": 53,
             "top": 150
         },
         "visible": true,
         "inversion": false
     },
     {
-        "id": 18,
+        "id": 5,
         "parent_id": 0,
         "type": "text_page",
         "text": "#d1",
         "ppem": 17,
         "color": 3,
         "ascent": 17,
-        "justify": 0,
+        "justify": 2,
         "line_width": [
             40,
             40,
@@ -347,14 +124,14 @@
         },
         "placement": {
             "type": "absolute",
-            "left": 118,
+            "left": 119,
             "top": 150
         },
         "visible": true,
         "inversion": false
     },
     {
-        "id": 19,
+        "id": 6,
         "parent_id": 0,
         "type": "text_page",
         "text": "#d2",
@@ -374,8 +151,293 @@
         },
         "placement": {
             "type": "absolute",
-            "left": 153,
+            "left": 152,
             "top": 150
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+      "id": 7,
+      "parent_id": 0,
+      "type": "image",
+      "image_name": "#background",
+      "placement": {
+        "type": "relative"
+      },
+      "visible": true,
+      "inversion": false
+    },
+    {
+        "id": 8,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_0"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_0",
+            "top": "#y_0"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 9,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_1"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_1",
+            "top": "#y_1"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 10,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_2"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_2",
+            "top": "#y_2"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 11,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_3"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_3",
+            "top": "#y_3"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 12,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_4"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_4",
+            "top": "#y_4"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 13,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_5"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_5",
+            "top": "#y_5"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 14,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_6"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_6",
+            "top": "#y_6"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 15,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_7"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_7",
+            "top": "#y_7"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 16,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_8"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_8",
+            "top": "#y_8"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 17,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_9"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_9",
+            "top": "#y_9"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 18,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_10"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_10",
+            "top": "#y_10"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 19,
+        "parent_id": 0,
+        "type": "solid",
+        "color": 3,
+        "dimension": {
+            "width": "#w",
+            "height": "#h_11"
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#x_11",
+            "top": "#y_11"
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 20,
+        "parent_id": 0,
+        "type": "text_page",
+        "text": "#marker1",
+        "ppem": 15,
+        "color": 3,
+        "ascent": 8,
+        "justify": 2,
+        "line_width": [
+            10,
+            40
+        ],
+        "dimension": {
+            "type": "rigid",
+            "width": 40,
+            "height": 30
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#marker1_pos",
+            "top": 73
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 21,
+        "parent_id": 0,
+        "type": "text_page",
+        "text": "#marker2",
+        "ppem": 15,
+        "color": 3,
+        "ascent": 8,
+        "justify": 2,
+        "line_width": [
+            10,
+            40
+        ],
+        "dimension": {
+            "type": "rigid",
+            "width": 40,
+            "height": 30
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#marker2_pos",
+            "top": 73
+        },
+        "visible": true,
+        "inversion": false
+    },
+    {
+        "id": 22,
+        "parent_id": 0,
+        "type": "image",
+		"image_name": "#button_top",
+        "dimension": {
+            "type": "rigid",
+            "width": 24,
+            "height": 24
+        },
+        "placement": {
+            "type": "absolute",
+            "left": "#button_top_bot_x",
+            "top": 55
         },
         "visible": true,
         "inversion": false
