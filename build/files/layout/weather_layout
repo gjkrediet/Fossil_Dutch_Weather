@@ -41,7 +41,7 @@
       "parent_id": 0,
       "type": "text",
       "text": "#temp_cur",
-      "ppem": 24,
+      "ppem": 22,
       "color": 3,
       "dimension": {
         "type": "rigid",
@@ -50,7 +50,7 @@
       },
       "placement": {
         "type": "absolute",
-        "left": 145,
+        "left": 140,
         "top": 126
       },
       "visible": true,
