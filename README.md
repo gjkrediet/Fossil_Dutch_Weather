@@ -54,7 +54,7 @@ The (global) variable %Knmidata should contain a JSON-string like this: {"temp":
 
 Action: nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG
 
-Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar": %Brdata}}}
+Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar":{"rawtxt":"%Brdata"}}}}
 	
 The (global) variable %Brdata should contain a string containing the data from buienradar with no delimiters or linebreaks. Thus it contains 7 characters (3 for precipitation, 4 for the time in hhmm) for each 5 minutes of data. It looks like this: 000151000015150401520040152500015300001535000154000015450001550120155515016000901605080161000016150001620000162500016300001635000164000016450001650000165500017000901705
 
