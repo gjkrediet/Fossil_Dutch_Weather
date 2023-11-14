@@ -39,16 +39,14 @@ return {
 			json_file: 'weather_layout'
 		}
 		
-		if (this.config.buienradar != undefined && this.config.buienradar.data.length == 72) {
-			var brdata=this.config.buienradar.data	
-			layout_info['brtijd'] = this.config.buienradar.time
-			var brhour=this.config.buienradar.time
-			brhour=parseInt(brhour.slice(0,2))
-			var brminutes=this.config.buienradar.time
-			brminutes=parseInt(brminutes.slice(3))
+		if (this.config.buienradar != undefined && this.config.buienradar.rawtxt.length == 168) {
+			var brdata=this.config.buienradar.rawtxt	
+			var brhour=parseInt(brdata.slice(3,5))
+			var brminutes=parseInt(brdata.slice(5,7))
 			var intensity
+
 			for (var i=0;i<12;++i) {
-				intensity = Math.max(brdata.substring(i*6,i*6+3),brdata.substring(i*6+3,i*6+6))
+				intensity = Math.max(brdata.substring(i*14,i*14+3),brdata.substring(i*14+7,i*14+10))
 				if (intensity>77) {
 					intensity = 3 + (intensity - 77) * 0.57
 				} else if (intensity>0) {
@@ -61,6 +59,7 @@ return {
 				layout_info['y_' + i] = 80 - intensity
 				layout_info['x_' + i] = 41 + i * 13
 			}
+
 			layout_info['w'] = 12
 			brhour+=1;
 			brhour%=24;
@@ -80,6 +79,7 @@ return {
 			layout_info['d1'] = this.config.knmi.d1tmax + '\n' + this.config.knmi.d1tmin + '\n' + this.config.knmi.d1neerslag
 			layout_info['d2'] = this.config.knmi.d2tmax + '°C\n' + this.config.knmi.d2tmin + '°C\n' + this.config.knmi.d2neerslag + '%'
 		}
+
 		layout_info['background'] = (get_common().U('WATCH_MODE')=='LEFTIE'?'weatherBGleftie':'weatherBG')
 		layout_info['button_middle'] = 'icHome'
 		layout_info['button_top'] = this.lock ? (this.working ? '' : 'icRefresh') : 'icLock'
