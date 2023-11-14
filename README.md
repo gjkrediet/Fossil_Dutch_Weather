@@ -38,7 +38,7 @@ Else if %extra_action EQ RetreiveWeather
  
 Endif
 
-You may woant to catch other requests for other apps, witch you should also include in this dispatcher (see https://codeberg.org/Freeyourgadget/Gadgetbridge/wiki/Fossil-Hybrid-HR#commute-app).
+You may woant to catch other requests for other apps, which you should also include in this dispatcher (see https://codeberg.org/Freeyourgadget/Gadgetbridge/wiki/Fossil-Hybrid-HR#commute-app).
 
 Intents sent to Gadgetbridge are one with knmi-data and one with buienradar-data. 
 
