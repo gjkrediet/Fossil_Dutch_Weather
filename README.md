@@ -59,7 +59,7 @@ Extra: EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar": %Brda
 The (global) variable %Brdata should contain a string containing the data from buienradar with no delimiters or linebreaks. Thus it contains 7 characters (3 for precipitation, 4 for the time in hhmm) for each 5 minutes of data. It looks like this: 000151000015150401520040152500015300001535000154000015450001550120155515016000901605080161000016150001620000162500016300001635000164000016450001650000165500017000901705
 
 ### Examples
-Three Tasker tasks are included as an example how to acheive the above. One for downloading buienradar-data and storing it in %Brdata, one for downloading KNMI-data and storing it in %Knmidata. Import them in Tasker, change them to your needs and create a profile for each to run them at a regular interval. KNMI-data needs an API-key which you need to obtain at weerlive.nl (for free for a limited update frequency) and insert into the http-request in tasker. The 'dispatcher' task is also included. 
+Three Tasker tasks are included as an example how to achieve the above. One for downloading buienradar-data and storing it in %Brdata, one for downloading KNMI-data and storing it in %Knmidata. Import them in Tasker, change them to your needs and create a profile for each to run them at a regular interval. KNMI-data needs an API-key which you need to obtain at weerlive.nl (for free for a limited update frequency) and insert into the http-request in tasker. The 'dispatcher' task is also included. 
 
 The source of the app is included as well as the wapp-file
 
