@@ -11,7 +11,7 @@ return {
 		knmi: undefined,
 		buienradar: undefined
 	},
-    timeout_timetelling: 10 * 1000,
+    timeout_timetelling: 30 * 1000,
     timeout_retrieve: 60 * 1000,
 	lock: false,
 	working: false,
