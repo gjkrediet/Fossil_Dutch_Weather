@@ -6,7 +6,7 @@ This app is designed for the Fossil Hybrid HR smartwatch. It will not work on an
 
 Dutch buienradar and KNMI are in my view the most reliable sources for weather and precipitation forecast. The watchface relies on Gadgetbridge for the communication with the watch and a 'companion' phone-app that can send information from the internet to gadgetbridge. I used tasker as the companion app.
 
-The Buienradar API provides hyperlocal and per 5 minutes data about the expected precipitation formatted as a flat text-file.
+The Buienradar API provides hyperlocal and per 5 minutes data about the expected precipitation in a text-file.
 The KNMI API provides local data about the weather including a 3 days forecast in JSON-format.
 
 For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-weerdata and https://weerlive.nl/delen.php.
@@ -15,7 +15,7 @@ The app is rightie/leftie-proof
 
 ![20231111_191428](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/84026132-1ff0-40bb-9c3c-da1b29f1c778)
 
-The app exits after 10 seconds unless you hit the top buton. It is then locked. When locked, the hands show the actual time and the app retrieves information from the phone every minute. By pressing the top-button again you send a request tot Gadetbridge, asking for an immediate update.
+The app exits after 30 seconds unless you hit the top buton. It is then locked. When locked, the hands show the actual time and the app retrieves information from the phone every minute. By pressing the top-button again you send a request tot Gadetbridge, asking for an immediate update of data from internet.
 
 ## App and Tasker
 The way I implemented it, the app relies on Tasker for retreiving information from the internet (buienradar and KNMI). The companion-app should send buienradar-data as a string without any delimiters or line-breaks. The various KNMI-data is sent in JSON format.
