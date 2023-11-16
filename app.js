@@ -80,7 +80,7 @@ return {
 			layout_info['d2'] = this.config.knmi.d2tmax + '°C\n' + this.config.knmi.d2tmin + '°C\n' + this.config.knmi.d2neerslag + '%'
 		}
 
-		layout_info['background'] = (get_common().U('WATCH_MODE')=='LEFTIE'?'weatherBGleftie':'weatherBG')
+		layout_info['background'] = 'weatherBG'
 		layout_info['button_middle'] = 'icHome'
 		layout_info['button_top'] = this.lock ? (this.working ? '' : 'icRefresh') : 'icLock'
 		layout_info['button_top_bot_x'] = 198
