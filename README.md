@@ -13,8 +13,6 @@ For more info take a look at https://www.buienradar.nl/overbuienradar/gratis-wee
 This app shows these data. Buienradar-data (with a resolution of 10 minutes on a timescale of 2 hours), the current location, temperature and min/max temperatures and rainchance of today and 2 days ahead. Upon start of the app the data is requested from Tasker and - when received - shown in the app. 
 The app is rightie/leftie-proof
 
-![20231111_191428](https://github.com/gjkrediet/Fossil_Dutch_Weather/assets/20277013/84026132-1ff0-40bb-9c3c-da1b29f1c778)
-
 The app exits after 30 seconds unless you press the top buton. It is then locked. When locked, the hands show the actual time and the app retrieves information from the phone every minute. By pressing the top-button again you send a request tot Gadetbridge, asking for an immediate update of data from internet.
 
 ### Installation
