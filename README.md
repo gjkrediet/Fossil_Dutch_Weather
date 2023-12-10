@@ -2,7 +2,7 @@
 App for Fossil Hybrid HR with info from Dutch buienradar and KNMI. One some firmwares the app may crash, possibly when low on memory.
 
 ## Description
-This app is designed for the Fossil Hybrid HR smartwatch. It will not work on any other smartwatch.
+This app is designed for the Fossil/Skagen Hybrid HR smartwatch. It will not work on any other smartwatch.
 
 Dutch buienradar and KNMI are in my view the most reliable sources for weather and precipitation forecast. The watchface relies on Gadgetbridge for the communication with the watch and a 'companion' phone-app that can send information from the internet to gadgetbridge. I used tasker as the companion app.
 
