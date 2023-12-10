@@ -1,9 +1,9 @@
 <TaskerData sr="" dvi="1" tv="6.2.14-rc">
-	<Task sr="task46">
+	<Task sr="task61">
 		<cdate>1695673238410</cdate>
-		<edate>1698999990497</edate>
-		<id>46</id>
-		<nme>Fossil_Dispatcher</nme>
+		<edate>1702200010964</edate>
+		<id>61</id>
+		<nme>Fossil_Dispatcher_V2</nme>
 		<pri>100</pri>
 		<Action sr="act0" ve="7">
 			<code>548</code>
@@ -35,16 +35,43 @@
 			</ConditionList>
 		</Action>
 		<Action sr="act10" ve="7">
+			<code>877</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.weather_current":{"current_temp":"%Current_temp","city":"%City","provider":"BR"}}}}</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>877</code>
+			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.weather_forecast":%Weather_forecast}}}</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act12" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%extra_action</lhs>
 					<op>2</op>
-					<rhs>Calendar</rhs>
+					<rhs>RetrieveCalendar</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act11" ve="7">
+		<Action sr="act13" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Fossil_Notify_Calendar</Str>
 			<Int sr="arg1">
@@ -60,12 +87,13 @@
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act12" ve="7">
+		<Action sr="act14" ve="7">
 			<code>38</code>
 		</Action>
 		<Action sr="act2" ve="7">
 			<code>130</code>
-			<Str sr="arg0" ve="3">Tasker_KNMI_Update</Str>
+			<se>false</se>
+			<Str sr="arg0" ve="3">Tasker_Location_Update_V2</Str>
 			<Int sr="arg1">
 				<var>%priority</var>
 			</Int>
@@ -81,7 +109,8 @@
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>130</code>
-			<Str sr="arg0" ve="3">Tasker_Bradar_Update</Str>
+			<se>false</se>
+			<Str sr="arg0" ve="3">Tasker_KNMI_Update_V2</Str>
 			<Int sr="arg1">
 				<var>%priority</var>
 			</Int>
@@ -96,35 +125,9 @@
 			<Int sr="arg9" val="0"/>
 		</Action>
 		<Action sr="act4" ve="7">
-			<code>877</code>
-			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
-			<Int sr="arg1" val="0"/>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar":{ "rawtxt":"%Brdata"}}}}</Str>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>877</code>
-			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
-			<Int sr="arg1" val="0"/>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.knmi": %Knmidata}}}</Str>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act6" ve="7">
 			<code>130</code>
-			<on>false</on>
-			<Str sr="arg0" ve="3">Fossil_Weather_Update1</Str>
+			<se>false</se>
+			<Str sr="arg0" ve="3">Tasker_Bradar_Update_V2</Str>
 			<Int sr="arg1">
 				<var>%priority</var>
 			</Int>
@@ -138,7 +141,46 @@
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
+		<Action sr="act5" ve="7">
+			<code>877</code>
+			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.weather_current":{"current_temp":"%Current_temp","city":"%City","provider":"BR"}}}}</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>877</code>
+			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.weather_rain":{"raindata":"%Raindata","start":"%Start","resolution":"%Resolution","span":"%Span"}}}}</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
 		<Action sr="act7" ve="7">
+			<code>877</code>
+			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.weather_forecast":%Weather_forecast}}}</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -148,26 +190,14 @@
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act8" ve="7">
-			<code>877</code>
-			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
-			<Int sr="arg1" val="0"/>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.buienradar":{ "rawtxt":"%Brdata"}}}}</Str>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
 		<Action sr="act9" ve="7">
 			<code>877</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">nodomain.freeyourgadget.gadgetbridge.Q_PUSH_CONFIG</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3"/>
 			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.knmi": %Knmidata}}}</Str>
+			<Str sr="arg4" ve="3">EXTRA_CONFIG_JSON:{"push":{"set":{"weatherApp._.config.weather_rain":{"raindata":"%Raindata","start":"%Start","resolution":"%Resolution","span":"%Span"}}}}</Str>
 			<Str sr="arg5" ve="3"/>
 			<Str sr="arg6" ve="3"/>
 			<Str sr="arg7" ve="3"/>

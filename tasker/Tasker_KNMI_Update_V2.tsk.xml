@@ -1,0 +1,93 @@
+<TaskerData sr="" dvi="1" tv="6.2.14-rc">
+	<Task sr="task65">
+		<cdate>1695411466820</cdate>
+		<edate>1702195294763</edate>
+		<id>65</id>
+		<nme>Tasker_KNMI_Update_V2</nme>
+		<pri>100</pri>
+		<stayawake>true</stayawake>
+		<Kid sr="Kid">
+			<launchID>29</launchID>
+			<pkg>com.gertjan.tasker</pkg>
+			<vTarg>29</vTarg>
+			<vnme>1.0</vnme>
+		</Kid>
+		<Action sr="act0" ve="7">
+			<code>339</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_cookies
+Cookies
+The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_data
+Data
+Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_file_output
+File Output
+Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_response_code
+Response Code
+The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
+Response Headers
+The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
+Response Length
+The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">https://weerlive.nl/api/json-data-10min.php?key=96c031f3d5&amp;locatie=%Lat,%Lon</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="40"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>129</code>
+			<Str sr="arg0" ve="3">let data = JSON.parse(http_data);
+var forecast = {};
+forecast['d0tmin'] = data.liveweer[0].d0tmin;
+forecast['d0tmax'] = data.liveweer[0].d0tmax;
+forecast['d0rain'] = data.liveweer[0].d0neerslag;
+forecast['d1tmin'] = data.liveweer[0].d1tmin;
+forecast['d1tmax'] = data.liveweer[0].d1tmax;
+forecast['d1rain'] = data.liveweer[0].d1neerslag;
+forecast['d2tmin'] = data.liveweer[0].d2tmin;
+forecast['d2tmax'] = data.liveweer[0].d2tmax;
+forecast['d2rain'] = data.liveweer[0].d2neerslag;
+forecast['unit_rain'] = '%';
+globalSet('Weather_forecast', JSON.stringify(forecast));
+globalSet('Current_temp', data.liveweer[0].temp);</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="45"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">%Weather_forecast</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
+		</Action>
+		<Img sr="icn" ve="2">
+			<cls>org.yoki.android.buienalarm.activity.LaunchActivity</cls>
+			<pkg>org.yoki.android.buienalarm</pkg>
+		</Img>
+	</Task>
+</TaskerData>
