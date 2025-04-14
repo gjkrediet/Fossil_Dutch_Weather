@@ -59,8 +59,8 @@ forecast['d2tmin'] = data.liveweer[0].d2tmin;
 forecast['d2tmax'] = data.liveweer[0].d2tmax;
 forecast['d2rain'] = data.liveweer[0].d2neerslag;
 forecast['unit_rain'] = '%';
-globalSet('Weather_forecast', JSON.stringify(forecast));
-globalSet('Current_temp', data.liveweer[0].temp);</Str>
+setGlobal('Weather_forecast', JSON.stringify(forecast));
+setGlobal('Current_temp', data.liveweer[0].temp);</Str>
 			<Str sr="arg1" ve="3"/>
 			<Int sr="arg2" val="1"/>
 			<Int sr="arg3" val="45"/>
